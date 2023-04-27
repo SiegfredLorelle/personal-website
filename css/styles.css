@@ -20,25 +20,47 @@ html {
   width: 100vw;
   height: 90vh;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-
+  grid-auto-flow: column;
 }
+
+
+
 
 header > .top-nav {
   height: 10vh;
 }
 
-.home > .image-sieg-container > .image-sieg {
+.home > .image-sieg-container {
+  width: 100%;
+}
 
+.home > .image-sieg-container > .image-sieg {
+  
   /* filter: grayscale(1.0); */
   opacity: 0.6;
-  height: 100%;
+  height: 90%;
+  /* padding-bottom: 5%; */
   width: auto;
-  object-position: position;
-  float: right;
-
+  /* max-width: 100%; */
+  /* object-position: position; */
+  /* object-fit: cover; */
+  margin: 0 0 0 auto;
+  display: block;
+  
 }
 
 .top-nav {
+  
+}
 
+
+
+
+@media screen and (max-width: 600px) {
+  .home {
+    grid-auto-flow: row;
+  }
+  .home > .image-sieg-container > .image-sieg {
+    margin: 0 auto;
+  }
 }
