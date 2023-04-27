@@ -16,18 +16,29 @@ html {
   
 }
 
+
+header {
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+
+.top-nav-list {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3rem;
+}
+
+
 .home {
   width: 100vw;
   height: 90vh;
   display: grid;
   grid-auto-flow: column;
-}
-
-
-
-
-header > .top-nav {
-  height: 10vh;
 }
 
 .home > .image-sieg-container {
@@ -49,9 +60,7 @@ header > .top-nav {
   
 }
 
-.top-nav {
-  
-}
+
 
 
 
