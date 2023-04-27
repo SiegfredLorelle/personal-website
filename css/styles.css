@@ -27,11 +27,18 @@ header {
 }
 
 
-.top-nav-list {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 3rem;
+header > .top-nav-list {
+  padding: 3rem;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+
+header > .top-nav-list > a {
+  padding: 0 2.5rem;
+}
+
 
 
 .home {
@@ -40,6 +47,20 @@ header {
   display: grid;
   grid-auto-flow: column;
 }
+
+.home > .introduction {
+  font-size: 2.5rem;
+  text-align: justify;
+  width: 90%;
+  align-self: center;
+  margin: auto 10%;
+}
+
+
+.home > .introduction > .name-intro {
+  color: pink;
+}
+
 
 .home > .image-sieg-container {
   width: 100%;
