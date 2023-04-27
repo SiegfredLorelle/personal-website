@@ -1,6 +1,7 @@
 :root {
   --background-color: #0c0b10;
   --text-color: #ffffff;
+  --highlight-text-color: rgb(255, 106, 106);
 }
 
 *, *::before, *::after {
@@ -13,7 +14,10 @@
 html {
   background-color: var(--background-color);
   color: var(--text-color);
-  
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.15;
 }
 
 
@@ -49,7 +53,7 @@ header > .top-nav-list > a {
 }
 
 .home > .introduction {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   text-align: justify;
   width: 90%;
   align-self: center;
@@ -58,7 +62,12 @@ header > .top-nav-list > a {
 
 
 .home > .introduction > .name-intro {
-  color: pink;
+  font-size: 5rem;
+}
+
+.home > .introduction > .name {
+  font-size: 7rem;
+  color: var(--highlight-text-color)
 }
 
 
