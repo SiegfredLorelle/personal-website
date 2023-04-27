@@ -1,0 +1,23 @@
+:root {
+  --background-color: #1b1a20;
+  --text-color: #ffffff;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.home {
+
+}
+.top-nav {
+
+}
