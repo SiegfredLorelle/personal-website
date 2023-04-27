@@ -14,7 +14,7 @@
 html {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: "poppins", sans-serif;
+  font-family: "poppins", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.15;
@@ -44,62 +44,106 @@ header > .top-nav-list > a {
 }
 
 
-
 .home {
   width: 100vw;
   height: 90vh;
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: 2fr 1fr;
 }
 
-.home > .introduction {
+.home > .introduction-container > .introduction {
   font-size: 1.75rem;
   text-align: justify;
-  width: 90%;
   align-self: center;
-  margin: auto 10%;
+  margin: 0 10%;
+  vertical-align: baseline;
+
 }
 
 
-.home > .introduction > .name-intro {
-  font-size: 5rem;
+.home > .introduction-container > .introduction-container > .introduction > .name-intro {
+  font-size: 4rem;
 }
 
-.home > .introduction > .name {
-  font-size: 7rem;
-  color: var(--highlight-text-color)
+.home > .introduction-container > .introduction > .name {
+  font-size: 6rem;
+  color: var(--highlight-text-color);
+  font-weight: 700;
 }
 
-
+.home > .introduction-container, 
 .home > .image-sieg-container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .home > .image-sieg-container > .image-sieg {
   
   /* filter: grayscale(1.0); */
   opacity: 0.6;
-  height: 90%;
-  /* padding-bottom: 5%; */
-  width: auto;
-  /* max-width: 100%; */
-  /* object-position: position; */
-  /* object-fit: cover; */
-  margin: 0 0 0 auto;
+  height: auto;
+  width: 90%;
+  margin: auto;
   display: block;
-  
 }
 
 
 
+/* Mobile and Tablets */
+@media screen and (max-width: 767px) {
+  .home > .introduction-container {
+    height: 90vh;
+  }
 
-
-
-@media screen and (max-width: 600px) {
+  .home > .introduction-container > .introduction {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .home > .introduction-container > .introduction > .name-intro {
+    font-size: 2.5rem;
+  }
+  .home > .introduction-container > .introduction > .name {
+    font-size: 4.5rem;
+  }
   .home {
+    grid-template-columns: none;
     grid-auto-flow: row;
   }
-  .home > .image-sieg-container > .image-sieg {
-    margin: 0 auto;
+}
+
+/* Small Monitors*/
+@media screen and (min-width: 768px) and (max-width:991px) {
+  .home > .introduction-container {
+    height: 90vh;
+  }
+
+  .home > .introduction-container > .introduction {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .home > .introduction-container > .introduction > .name-intro {
+    font-size: 3rem;
+  }
+  .home > .introduction-container > .introduction > .name {
+    font-size: 5rem;
+  }
+  .home {
+    grid-template-columns: none;
+    grid-auto-flow: row;
+  }
+}
+
+/* Large Monitors */
+@media screen and (min-width: 992px) and (max-width:1264px) {
+  .home > .introduction-container > .introduction {
+    font-size: 1.25rem;
+  }
+  .home > .introduction-container > .introduction > .name-intro {
+    font-size: 2.5rem;
+  }
+  .home > .introduction-container > .introduction > .name {
+    font-size: 4.5rem;
   }
 }
