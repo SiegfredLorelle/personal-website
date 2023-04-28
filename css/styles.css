@@ -16,13 +16,14 @@
   }
 
 
-html {
+body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: "poppins", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.15;
+  /* overflow-y:scroll; */
 }
 
 button {
@@ -32,14 +33,18 @@ button {
 
 
 header {
-  padding: 3rem;
+  padding: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   height: 10vh;
+  height: 10dvh;
 }
 
+header .logo {
+  padding: 0 1rem;
+}
 
 header > .top-nav-list {
   align-self: center;
@@ -50,10 +55,20 @@ header > .top-nav-list {
 }
 
 
+header > .header-btn.top-nav-hamburger,
+header > .header-btn.toggle-theme-btn {
+  padding: 1rem;
+  display: grid;
+  align-items: center;
+}
+
+header > .header-btn.top-nav-hamburger {
+  display: none;
+}
+
 header .header-btn {
   padding: 1rem 2.5rem;
   background-color: var(--background-color);
-  /* background-color: pink; */
   font-size: var(--small-font-size);
   color: var(--text-color);
   border-radius:  2rem;
@@ -63,15 +78,9 @@ header .header-btn:hover {
   background-color: var(--hover-background-color);
 }
 
-header .header-btn.toggle-theme-btn {
-  padding: 1rem;
-  display: grid;
-  align-items: center;
-}
-
 .home {
-  width: 100vw;
   height: 90vh;
+  height: 90dvh;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
@@ -94,7 +103,7 @@ header .header-btn.toggle-theme-btn {
 }
 
 
-.home > .introduction-container > .introduction-container > .introduction > .name-intro {
+.home > .introduction-container > .introduction > .name-intro {
   font-size: var(--large-font-size);
 }
 
@@ -125,8 +134,20 @@ header .header-btn.toggle-theme-btn {
     --larger-font-size: 4.5rem;
   }
 
+  header {
+    padding: 3rem 0;
+  }
+  header > .top-nav-list {
+    display: none;
+  }
+
+header > .header-btn.top-nav-hamburger {
+    display: grid;
+  }
+  
   .home > .introduction-container {
     height: 90vh;
+    height: 90dvh;
   }
   
   .home > .introduction-container > .introduction {
@@ -139,7 +160,7 @@ header .header-btn.toggle-theme-btn {
   }
 }
 
-/* Small Monitors*/
+/* Small Monitors */
 @media screen and (min-width: 768px) and (max-width:991px) {
   :root {
     --regular-font-size: 1.5rem;
@@ -147,8 +168,13 @@ header .header-btn.toggle-theme-btn {
     --larger-font-size: 5rem;
   }
   
+  header .header-btn {
+    padding: 1rem 1.5rem;
+  }
+
   .home > .introduction-container {
     height: 90vh;
+    height: 90dvh;
   }
   
   .home > .introduction-container > .introduction {
