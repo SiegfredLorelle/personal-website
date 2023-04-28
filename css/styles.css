@@ -2,6 +2,10 @@
   --background-color: #0c0b10;
   --text-color: #ffffff;
   --highlight-text-color: rgb(255, 106, 106);
+  --small-font-size: 1.25rem;
+  --regular-font-size: 1.75rem;
+  --large-font-size: 4rem;
+  --larger-font-size: 6rem;
 }
 
 *, *::before, *::after {
@@ -22,6 +26,7 @@ html {
 
 button {
   border: none;
+  padding: 0.5rem;
 }
 
 
@@ -37,16 +42,18 @@ header {
 
 header > .top-nav-list {
   align-self: center;
-  /* margin: 0 1rem; */
   width: 75%;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-header > .top-nav-list > button {
-  /* margin: 0 3rem; */
+
+header > .top-nav-list > .top-nav-item {
   padding: 1rem 2.5rem;
+}
+header > .top-nav-list > .top-nav-item > a {
+  font-size: var(--small-font-size);
 }
 
 
@@ -57,33 +64,34 @@ header > .top-nav-list > button {
   grid-template-columns: 2fr 1fr;
 }
 
-.home > .introduction-container > .introduction {
-  font-size: 1.75rem;
-  text-align: justify;
-  align-self: center;
-  margin: 0 10%;
-  vertical-align: baseline;
-
-}
-
-
-.home > .introduction-container > .introduction-container > .introduction > .name-intro {
-  font-size: 4rem;
-}
-
-.home > .introduction-container > .introduction > .name {
-  font-size: 6rem;
-  color: var(--highlight-text-color);
-  font-weight: 700;
-}
-
 .home > .introduction-container, 
 .home > .image-sieg-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
+
+.home > .introduction-container > .introduction {
+  font-size: var(--regular-font-size);
+  text-align: justify;
+  align-self: center;
+  margin: 0 10%;
+  vertical-align: baseline;
+}
+
+
+.home > .introduction-container > .introduction-container > .introduction > .name-intro {
+  font-size: var(--large-font-size);
+}
+
+.home > .introduction-container > .introduction > .name {
+  font-size: var(--larger-font-size);
+  color: var(--highlight-text-color);
+  font-weight: 700;
+}
+
 
 .home > .image-sieg-container > .image-sieg {
   
@@ -99,20 +107,20 @@ header > .top-nav-list > button {
 
 /* Mobile and Tablets */
 @media screen and (max-width: 767px) {
+  :root {
+    --regular-font-size: 1.5rem;
+    --large-font-size: 2.5rem;
+    --larger-font-size: 4.5rem;
+  }
+
   .home > .introduction-container {
     height: 90vh;
   }
-
+  
   .home > .introduction-container > .introduction {
-    font-size: 1.5rem;
     text-align: center;
   }
-  .home > .introduction-container > .introduction > .name-intro {
-    font-size: 2.5rem;
-  }
-  .home > .introduction-container > .introduction > .name {
-    font-size: 4.5rem;
-  }
+
   .home {
     grid-template-columns: none;
     grid-auto-flow: row;
@@ -121,20 +129,20 @@ header > .top-nav-list > button {
 
 /* Small Monitors*/
 @media screen and (min-width: 768px) and (max-width:991px) {
+  :root {
+    --regular-font-size: 1.5rem;
+    --large-font-size: 3rem;
+    --larger-font-size: 5rem;
+  }
+  
   .home > .introduction-container {
     height: 90vh;
   }
-
+  
   .home > .introduction-container > .introduction {
-    font-size: 1.5rem;
     text-align: center;
   }
-  .home > .introduction-container > .introduction > .name-intro {
-    font-size: 3rem;
-  }
-  .home > .introduction-container > .introduction > .name {
-    font-size: 5rem;
-  }
+  
   .home {
     grid-template-columns: none;
     grid-auto-flow: row;
@@ -143,13 +151,9 @@ header > .top-nav-list > button {
 
 /* Large Monitors */
 @media screen and (min-width: 992px) and (max-width:1264px) {
-  .home > .introduction-container > .introduction {
-    font-size: 1.25rem;
-  }
-  .home > .introduction-container > .introduction > .name-intro {
-    font-size: 2.5rem;
-  }
-  .home > .introduction-container > .introduction > .name {
-    font-size: 4.5rem;
+  :root {
+    --regular-font-size: 1.25rem;
+    --large-font-size: 2.5rem;
+    --larger-font-size: 4.5rem;
   }
 }
