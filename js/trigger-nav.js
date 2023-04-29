@@ -1,7 +1,7 @@
-let body = document.querySelector("body");
-let hamburgerBtn = document.querySelector(".top-nav-hamburger-btn");
-let nav = document.querySelector(".top-nav-list.mobile");
-let sections = document.querySelectorAll("section");
+const body = document.querySelector("body");
+const hamburgerBtn = document.querySelector(".top-nav-hamburger-btn");
+const nav = document.querySelector(".top-nav-list.mobile");
+const sections = document.querySelectorAll("section");
 
 
 function showNav() {
