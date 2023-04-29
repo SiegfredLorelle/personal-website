@@ -1,8 +1,11 @@
 :root {
-  --background-color: #0c0b10;
-  --hover-background-color: #181820;
-  --text-color: #ffffff;
+  --primary-bg-color: #0c0b10;
+  --hover-bg-color: #181820;
+  --secondary-bg-color: #444444;
+
+  --text-color: #EDEDED;
   --highlight-text-color: rgb(255, 106, 106);
+
   --small-font-size: 1.25rem;
   --regular-font-size: 1.75rem;
   --large-font-size: 4rem;
@@ -17,7 +20,7 @@
 
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--primary-bg-color);
   color: var(--text-color);
   font-family: "poppins", "Arial", sans-serif;
   font-weight: 400;
@@ -28,6 +31,7 @@ body {
 button {
   border: none;
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 
@@ -44,7 +48,7 @@ header > .logo,
 header .header-btn,
 .top-nav-list.mobile > .header-btn {
   padding: 1rem 2.5rem;
-  background-color: var(--background-color);
+  background-color: var(--primary-bg-color);
   font-size: var(--small-font-size);
   color: var(--text-color);
   border-radius:  2rem;
@@ -52,7 +56,7 @@ header .header-btn,
 
 header > .logo {
   padding: 0 1rem;
-  background-color: var(--background-color);
+  background-color: var(--primary-bg-color);
   color: var(--text-color);
   font-size: var(--regular-font-size);
   margin-right: 3rem;
@@ -85,7 +89,7 @@ header > .header-btn.toggle-theme-btn {
 
 header .header-btn:hover,
 .top-nav-list.mobile > .header-btn:hover {
-  background-color: var(--hover-background-color);
+  background-color: var(--hover-bg-color);
 }
 
 
@@ -200,6 +204,11 @@ header .header-btn:hover,
     grid-auto-flow: row;
   }
 }
+
+
+
+
+
 
 /* Small Monitors */
 @media screen and (min-width: 768px) and (max-width:991px) {
