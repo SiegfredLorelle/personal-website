@@ -55,14 +55,14 @@ header > .top-nav-list {
 }
 
 
-header > .header-btn.top-nav-hamburger,
+header > .header-btn.top-nav-hamburger-btn,
 header > .header-btn.toggle-theme-btn {
   padding: 1rem;
   display: grid;
   align-items: center;
 }
 
-header > .header-btn.top-nav-hamburger {
+header > .header-btn.top-nav-hamburger-btn {
   display: none;
 }
 
@@ -140,6 +140,14 @@ header .header-btn:hover,
 
 
 
+
+
+
+
+
+
+
+
 /* Mobile and Tablets */
 @media screen and (max-width: 767px) {
   :root {
@@ -149,14 +157,14 @@ header .header-btn:hover,
   }
 
   header {
-    padding: 3rem 0;
+    /* padding: 3rem 1rem; */
   }
   header > .top-nav-list {
     display: none;
   }
 
-  .top-nav-list.mobile,
-  header > .header-btn.top-nav-hamburger {
+  /* .top-nav-list.mobile, */
+  header > .header-btn.top-nav-hamburger-btn {
       display: grid;
   }
 
