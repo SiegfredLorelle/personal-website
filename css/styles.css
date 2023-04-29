@@ -214,9 +214,9 @@ header .header-btn:hover,
 .skills {
   background-color: aqua;
   background-color: var(--secondary-bg-color);
-  padding: 3rem;
-  height: 100vh;
-  height: 100dvh;
+  /* padding: 3rem; */
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .skills > .skills-container {
@@ -226,12 +226,14 @@ header .header-btn:hover,
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .skills > .skills-container > .skill-icon {
-  font-size: var(--larger-font-size);
+  font-size: var(--large-font-size);
   margin: 0.5rem;
+  padding: 1rem;
 }
 
 

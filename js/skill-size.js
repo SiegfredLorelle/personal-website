@@ -1,10 +1,9 @@
-const cell = document.querySelectorAll(".skill-icon");
 const skills = [
   {
     skillName: "html",
     classClassification: "fa-brands",
     className: "fa-html5",
-    proficiency: 70,
+    proficiency: 80,
   },
   {
     skillName: "css",
@@ -22,31 +21,31 @@ const skills = [
     skillName: "c#",
     classClassification: "fa-brands",
     className: "devicon-csharp-plain",
-    proficiency: 70,
+    proficiency: 30,
   },
   {
     skillName: "c",
     classClassification: "fa-brands",
     className: "devicon-c-plain",
-    proficiency: 70,
+    proficiency: 40,
   },
   {
     skillName: "python",
     classClassification: "fa-brands",
     className: "fa-python",
-    proficiency: 70,
+    proficiency: 90,
   },
   {
     skillName: "R",
     classClassification: "fa-brands",
     className: "fa-r-project",
-    proficiency: 70,
+    proficiency: 30,
   },
   {
     skillName: "unity",
     classClassification: "fa-brands",
     className: "fa-unity",
-    proficiency: 70,
+    proficiency: 60,
   },
   {
     skillName: "git",
@@ -58,7 +57,7 @@ const skills = [
     skillName: "bootstrap",
     classClassification: "fa-brands",
     className: "fa-bootstrap",
-    proficiency: 70,
+    proficiency: 80,
   },
   {
     skillName: "unix",
@@ -70,22 +69,34 @@ const skills = [
     skillName: "SQLite",
     classClassification: "fa-brands",
     className: "devicon-sqlite-plain",
-    proficiency: 70,
+    proficiency: 60,
   },
   {
     skillName: "Flask",
     classClassification: "fa-brands",
     className: "devicon-flask-plain",
-    proficiency: 70,
-  },
-
+    proficiency: 60,
+  }
 ]
 
-cell.forEach(cell => {
+
+// for (const counter of range(1, skills.length)) {
+//   console.log(counter)
+// }
+const skillsContainer = document.querySelector(".skills-container");
+while (skills) {
+
+  // Create skill icon as a child of skills container
+  const cell = document.createElement("i");
+  cell.classList.add("skill-icon", "fa-brands");
+  skillsContainer.appendChild(cell);
+
+  // Add the skill in
   let skill = skills.pop()
-  // console.log(skill, skill.className);
-  cell.classList.add(skill.classClassification, skill.className);
-})
+  console.log(skills);
+  cell.classList.add(skill.className);
+  fontSize = skill.proficiency * (window.innerWidth / 100);
+  cell.style.fontSize = `${fontSize}%`;
+}
 
-
-
+const cell = document.querySelectorAll(".skill-icon");
