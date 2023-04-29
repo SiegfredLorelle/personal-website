@@ -1,7 +1,7 @@
 :root {
   --primary-bg-color: #0c0b10;
   --hover-bg-color: #181820;
-  --secondary-bg-color: #444444;
+  --secondary-bg-color: #191919;
 
   --text-color: #EDEDED;
   --highlight-text-color: rgb(255, 106, 106);
@@ -105,8 +105,8 @@ header .header-btn:hover,
 
 
 .home {
-  height: 90vh;
-  height: 90dvh;
+  min-height: 90vh;
+  min-height: 90dvh;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
@@ -205,6 +205,51 @@ header .header-btn:hover,
   }
 }
 
+/* End of Home Section */
+
+/* ========================================================================== */
+
+/* Start of Skills Section */
+
+.skills {
+  background-color: aqua;
+  background-color: var(--secondary-bg-color);
+  padding: 3rem;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.skills > .skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.skills > .skills-container > .skill-icon {
+  font-size: var(--larger-font-size);
+  margin: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -230,7 +275,7 @@ header .header-btn:hover,
   .home > .introduction-container > .introduction {
     text-align: center;
   }
-  
+
   .home {
     grid-template-columns: none;
     grid-auto-flow: row;
