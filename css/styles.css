@@ -271,6 +271,7 @@ header .header-btn:hover,
 
 }
 .projects > .projects-container > .project-container > img {
+  object-fit: contain;
   width: 100%;
   height: 100%;
   border-radius: 25px;
