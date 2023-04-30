@@ -278,6 +278,11 @@ header .header-btn:hover,
   display: block;
 }
 
+.projects > .projects-container.more-projects {
+  padding-top: 0;
+  display: none;
+}
+
 .projects > .more-btn {
   background-color: var(--secondary-bg-color);
   color: var(--text-color);
