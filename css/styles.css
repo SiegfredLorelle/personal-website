@@ -284,7 +284,7 @@ header .header-btn:hover,
   margin: 2rem auto;
   display: flex;
   align-items: center;
-  
+  gap: 0.5rem;
   font-size: var(--smaller-font-size);
   padding: 1.25rem;
   border-radius: 2rem;
@@ -295,16 +295,8 @@ header .header-btn:hover,
   color: var(--primary-bg-color);
 }
 
-.projects > .more-btn > .more-icons-container {
-  padding: 0 1.5rem 0 0;
-  display: flex;
-  align-items: center;
-}
-
-.projects > .more-btn > .more-icons-container > .more-icon {
-  position: absolute;
+.projects > .more-btn > .more-icon {
   font-size: var(--small-font-size);
-  margin: auto;
 }
 
 

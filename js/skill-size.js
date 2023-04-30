@@ -105,7 +105,6 @@ function createSkillIcons() {
 
 function getRandomIndex(size) {
   let index = Math.floor(Math.random() * size)
-  console.log(index); 
   return index;
 }
 
