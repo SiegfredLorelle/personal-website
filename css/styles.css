@@ -262,9 +262,20 @@ header .header-btn:hover,
 }
 
 .projects > .projects-container > .project-container {
-  background-color: pink;
+  /* background-color: pink; */
   margin: 0.5em;
+  width: 40vmax;
+  height: auto;
+  /* height: 60vmin; */
+  /* display: block; */
   /* padding: 1rem; */
+}
+
+.projects > .projects-container > .project-container > img {
+  object-fit: contain;
+
+  width: 100%;
+  height: 100%;
 }
 
 
