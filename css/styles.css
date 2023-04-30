@@ -236,6 +236,10 @@ header .header-btn:hover,
   padding: 1rem;
 }
 
+.skills > .skills-container > .skill-icon:hover {
+  color: var(--highlight-text-color);
+}
+
 
 
 
