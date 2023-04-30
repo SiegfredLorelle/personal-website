@@ -6,6 +6,7 @@
   --text-color: #EDEDED;
   --highlight-text-color: rgb(255, 106, 106);
 
+  --small-font-size: 1rem;
   --small-font-size: 1.25rem;
   --regular-font-size: 1.75rem;
   --large-font-size: 4rem;
@@ -18,7 +19,7 @@
   box-sizing: border-box;
   }
 
-
+html,
 body {
   background-color: var(--primary-bg-color);
   color: var(--text-color);
@@ -32,6 +33,7 @@ button {
   border: none;
   padding: 0.5rem;
   cursor: pointer;
+  font-family: "poppins", "Arial", sans-serif;
 }
 
 
@@ -274,6 +276,35 @@ header .header-btn:hover,
   border-radius: 25px;
   opacity: 0.75;
   display: block;
+}
+
+.projects > .more-btn {
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  
+  font-size: var(--smaller-font-size);
+  padding: 1.25rem;
+  border-radius: 2rem;
+}
+
+.projects > .more-btn:hover {
+  background-color: var(--text-color);
+  color: var(--primary-bg-color);
+}
+
+.projects > .more-btn > .more-icons-container {
+  padding: 0 1.5rem 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.projects > .more-btn > .more-icons-container > .more-icon {
+  position: absolute;
+  font-size: var(--small-font-size);
+  margin: auto;
 }
 
 
