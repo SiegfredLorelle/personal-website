@@ -239,21 +239,17 @@ header .header-btn:hover,
   color: var(--highlight-text-color);
 }
 
-
-
-
 /* End of Skills Section */
 
 /* ========================================================================== */
 
 /* Start of Project Section */
 
-
 .projects > .projects-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -262,27 +258,22 @@ header .header-btn:hover,
 }
 
 .projects > .projects-container > .project-container {
-  /* margin: 0.5em; */
   width: 40vmax;
   border: 100px;
   border-radius: 25px;
-  box-shadow: 0.5rem 0.5rem 0.25rem var(--hover-bg-color);
+  box-shadow: 0.75rem 0.75rem 0.25rem var(--hover-bg-color);
 }
 
 .projects > .projects-container > .project-container:hover {
-  box-shadow: 0.5rem 0.5rem 0.25rem var(--highlight-text-color);
+  box-shadow: 0.75rem 0.75rem 0.25rem var(--highlight-text-color);
 
 }
 .projects > .projects-container > .project-container > img {
-  object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 25px;
   opacity: 0.75;
-  overflow-clip-margin: unset;
-
   display: block;
-  /* padding: auto; */
 }
 
 
