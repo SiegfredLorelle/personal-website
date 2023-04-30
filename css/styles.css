@@ -214,7 +214,6 @@ header .header-btn:hover,
 .skills {
   background-color: aqua;
   background-color: var(--secondary-bg-color);
-  /* padding: 3rem; */
   min-height: 100vh;
   min-height: 100dvh;
 }
@@ -243,9 +242,30 @@ header .header-btn:hover,
 
 
 
+/* End of Skills Section */
+
+/* ========================================================================== */
+
+/* Start of Project Section */
 
 
+.projects > .projects-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 3em;
+}
 
+.projects > .projects-container > .project-container {
+  background-color: pink;
+  margin: 0.5em;
+  /* padding: 1rem; */
+}
 
 
 
