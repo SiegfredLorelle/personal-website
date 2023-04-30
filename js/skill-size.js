@@ -76,22 +76,41 @@ const skills = [
     classClassification: "fa-brands",
     className: "devicon-flask-plain",
     proficiency: 60,
-  }
+  },
 ]
 
 const skillsContainer = document.querySelector(".skills-container");
 
-while (skills) {
+let sortedIcons = []
+
+createSkillIcons();
+
+function createSkillIcons() {
+  let skillsCopy = skills.slice();
+  // console.log(skillsCopy);
+
+  while (skillsCopy.length) {
+    let skill = skillsCopy.pop();
+    // console.log(skill);
+    cell = addSkillIcon(skill);
+    adjustSkillIconSize(skill, cell);
+
+    sortedIcons.push({cell: cell, skill, skill});
+  }
+}
+
+function addSkillIcon(skill) {
   // Create a cell for skill icon as a child of skills container
+  // console.log(skill.className);
   const cell = document.createElement("i");
   cell.classList.add("skill-icon", "fa-brands");
   skillsContainer.appendChild(cell);
-
-  // Add the skill icon
-  let skill = skills.pop()
-  console.log(skills);
   cell.classList.add(skill.className);
-  
+  return cell;
+
+}
+
+function adjustSkillIconSize(skill, cell) {
   // Find the larger window dimension
   largerWindowDimension = window.innerHeight
   if (largerWindowDimension < window.innerWidth) {
@@ -102,4 +121,10 @@ while (skills) {
   cell.style.fontSize = `${fontSize}%`;
 }
 
-// DETECT WINDOW SIZE CHANGE AND ADJUST FONT SIZES
+
+/* Listen to window resize to update the skill icon size */
+window.addEventListener("resize", () => {
+  sortedIcons.forEach(icon => {
+    adjustSkillIconSize(icon.skill, icon.cell);
+  });
+});
