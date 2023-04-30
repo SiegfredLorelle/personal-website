@@ -81,27 +81,36 @@ const skills = [
 
 const skillsContainer = document.querySelector(".skills-container");
 
+/* Created icons will be stored here which will be helpful when updating skill
+icon sizes */
 let sortedIcons = []
 
 createSkillIcons();
 
 function createSkillIcons() {
-  let skillsCopy = skills.slice();
-  // console.log(skillsCopy);
 
-  while (skillsCopy.length) {
-    let skill = skillsCopy.pop();
-    // console.log(skill);
-    cell = addSkillIcon(skill);
+  while (skills.length) {
+    // Get a random index to remove
+    let randomIndex = getRandomIndex(skills.length);
+    let skill = skills.splice(randomIndex, 1)[0];
+    // Create skill icon then adjust its size
+    cell = createSkillIcon(skill);
     adjustSkillIconSize(skill, cell);
 
+    // Save each cell and skills to sorted icons so later it can be used later 
+    // when skill icons needs to be updated
     sortedIcons.push({cell: cell, skill, skill});
   }
 }
 
-function addSkillIcon(skill) {
+function getRandomIndex(size) {
+  let index = Math.floor(Math.random() * size)
+  console.log(index); 
+  return index;
+}
+
+function createSkillIcon(skill) {
   // Create a cell for skill icon as a child of skills container
-  // console.log(skill.className);
   const cell = document.createElement("i");
   cell.classList.add("skill-icon", "fa-brands");
   skillsContainer.appendChild(cell);
