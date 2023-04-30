@@ -79,24 +79,27 @@ const skills = [
   }
 ]
 
-
-// for (const counter of range(1, skills.length)) {
-//   console.log(counter)
-// }
 const skillsContainer = document.querySelector(".skills-container");
-while (skills) {
 
-  // Create skill icon as a child of skills container
+while (skills) {
+  // Create a cell for skill icon as a child of skills container
   const cell = document.createElement("i");
   cell.classList.add("skill-icon", "fa-brands");
   skillsContainer.appendChild(cell);
 
-  // Add the skill in
+  // Add the skill icon
   let skill = skills.pop()
   console.log(skills);
   cell.classList.add(skill.className);
-  fontSize = skill.proficiency * (window.innerWidth / 100);
+  
+  // Find the larger window dimension
+  largerWindowDimension = window.innerHeight
+  if (largerWindowDimension < window.innerWidth) {
+    largerWindowDimension = window.innerWidth
+  }
+  // Adjust the size of cell based on proficiency & larger window dimension
+  fontSize = skill.proficiency * (largerWindowDimension / 100);
   cell.style.fontSize = `${fontSize}%`;
 }
 
-const cell = document.querySelectorAll(".skill-icon");
+// DETECT WINDOW SIZE CHANGE AND ADJUST FONT SIZES
