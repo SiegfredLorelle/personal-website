@@ -251,7 +251,7 @@ header .header-btn:hover,
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -261,22 +261,32 @@ header .header-btn:hover,
 
 .projects > .projects-container > .project-container {
   width: 40vmax;
-  border: 100px;
+  aspect-ratio: 16 / 9;
   border-radius: 25px;
+  opacity: 0.75;
   box-shadow: 0.75rem 0.75rem 0.25rem var(--hover-bg-color);
 }
 
 .projects > .projects-container > .project-container:hover {
   box-shadow: 0.75rem 0.75rem 0.25rem var(--highlight-text-color);
-
+  opacity: 1;
 }
 .projects > .projects-container > .project-container > img {
   object-fit: contain;
   width: 100%;
   height: 100%;
   border-radius: 25px;
-  opacity: 0.75;
   display: block;
+}
+.projects > .projects-container > .project-container.text {
+  background-color: var(--text-color);
+  color: var(--primary-bg-color);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--regular-font-size);
 }
 
 .projects > .projects-container.more-projects {
