@@ -64,7 +64,7 @@ header > .logo {
   color: var(--text-color);
   font-size: var(--regular-font-size);
   margin-right: 3rem;
-  border-radius:  25px;
+  border-radius: 25px;
 
 
 }
@@ -333,6 +333,8 @@ section > .section-heading {
 
 .contacts {
   /* background-color: var(--secondary-bg-color); */
+  /* min-height: 100vh; */
+  min-height: 0;
   padding: 3em;
 
 }
@@ -387,19 +389,32 @@ section > .section-heading {
 .contacts > .contact-infos-container > button > i {
   color: var(--highlight-text-color);
   font-size: calc(1em + 1vw);
-
 }
 
 .contacts > .contact-infos-container > button > span {
-  display: block;
   font-size: calc(0.5em + 1vw);
 
 }
 
 
+footer > .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 
+footer > .socials > a {
+  justify-content: center;
+  border-radius: 50%;
+  margin: 1.5rem;
+  font-size: calc(0.75em + 1vw);
+  text-decoration: none;
+  color: var(--text-color);
+}
 
-
+footer > .socials > a > i:hover {
+  color: var(--highlight-text-color);
+}
 
 
 
