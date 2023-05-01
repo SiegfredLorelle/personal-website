@@ -1,0 +1,1 @@
+// const projectLinks = document.querySelectorAll(".project-lin");
