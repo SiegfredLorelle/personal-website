@@ -1,7 +1,7 @@
 :root {
   --primary-bg-color: #0c0b10;
   --hover-bg-color: #181820;
-  --secondary-bg-color: #191919;
+  --secondary-bg-color: #181818;
 
   --text-color: #EDEDED;
   --highlight-text-color: rgb(255, 106, 106);
@@ -332,7 +332,7 @@ section > .section-heading {
 /* Start of Contacts Section */
 
 .contacts {
-  background-color: var(--secondary-bg-color);
+  /* background-color: var(--secondary-bg-color); */
   padding: 3em;
 
 }
@@ -350,23 +350,36 @@ section > .section-heading {
   flex-direction: column;
   width: 30vmax;
   width: 30dvmax;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 4;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+}
+
+.contacts > .contact-infos-container > button {
+  border-radius: 25px;
+  padding: 1rem;
+  width: 100%;
+}
+
+
+.contacts > .contact-infos-container > button:hover {
+  background-color: var(--secondary-bg-color);
 
 }
-.contacts > .contact-infos-container > div > i {
+
+.contacts > .contact-infos-container > button > i {
   color: var(--highlight-text-color);
-  font-size: 200%;
+  font-size: calc(1em + 1vw);
+
 }
 
+.contacts > .contact-infos-container > button > span {
+  /* font-size: 1rem; */
+  display: block;
+  font-size: calc(0.5em + 1vw);
 
-.contacts > .contact-infos-container > div > p {
-  font-size: 100%;
 }
-
-
 
 
 
