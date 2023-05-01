@@ -2,7 +2,6 @@
   --primary-bg-color: #0c0b10;
   --hover-bg-color: #181820;
   --secondary-bg-color: #191919;
-  --disabled-btn-color:  rgb(107, 107, 107);
 
   --text-color: #EDEDED;
   --highlight-text-color: rgb(255, 106, 106);
@@ -166,50 +165,7 @@ header .header-btn:hover,
 
 
 
-/* Mobile and Tablets */
-@media screen and (max-width: 767px) {
-  :root {
-    --regular-font-size: 1.5rem;
-    --large-font-size: 2.5rem;
-    --larger-font-size: 4.5rem;
-  }
 
-  header {
-    justify-content: space-between;
-  }
-
-  header > .logo {
-    margin-right: 0;
-  }
-  
-  header > .top-nav-list {
-    display: none;
-  }
-
-  /* .top-nav-list.mobile, */
-  header > .header-btn.top-nav-hamburger-btn {
-      display: grid;
-  }
-
-  header > .header-btn.toggle-theme-btn {
-    margin-left: 0;
-  }
-  
-
-  .home > .introduction-container {
-    height: 90vh;
-    height: 90dvh;
-  }
-  
-  .home > .introduction-container > .introduction {
-    text-align: center;
-  }
-
-  .home {
-    grid-template-columns: none;
-    grid-auto-flow: row;
-  }
-}
 
 /* End of Home Section */
 
@@ -343,7 +299,6 @@ header .header-btn:hover,
 .projects > .projects-container > .project-container > 
 .project-links > .inactive-link {
   opacity: 0.5;
-  background-color: --disabled-btn-color;
   cursor: not-allowed
 }
 
@@ -365,6 +320,17 @@ header .header-btn:hover,
   color: var(--primary-bg-color);
 }
 
+/* End of Projects Section */
+
+/* ========================================================================== */
+
+/* Start of Contacts Section */
+
+.contacts {
+  background-color: var(--secondary-bg-color);
+  padding: 3em;
+
+}
 
 
 
@@ -372,11 +338,49 @@ header .header-btn:hover,
 
 
 
+/* Mobile and Tablets */
+@media screen and (max-width: 767px) {
+  :root {
+    --regular-font-size: 1.5rem;
+    --large-font-size: 2.5rem;
+    --larger-font-size: 4.5rem;
+  }
 
+  header {
+    justify-content: space-between;
+  }
 
+  header > .logo {
+    margin-right: 0;
+  }
+  
+  header > .top-nav-list {
+    display: none;
+  }
 
+  header > .header-btn.top-nav-hamburger-btn {
+      display: grid;
+  }
 
+  header > .header-btn.toggle-theme-btn {
+    margin-left: 0;
+  }
+  
 
+  .home > .introduction-container {
+    height: 90vh;
+    height: 90dvh;
+  }
+  
+  .home > .introduction-container > .introduction {
+    text-align: center;
+  }
+
+  .home {
+    grid-template-columns: none;
+    grid-auto-flow: row;
+  }
+}
 
 
 /* Small Monitors */
