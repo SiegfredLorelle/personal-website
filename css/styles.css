@@ -6,7 +6,7 @@
   --text-color: #EDEDED;
   --highlight-text-color: rgb(255, 106, 106);
 
-  --small-font-size: 1rem;
+  --smaller-font-size: 1rem;
   --small-font-size: 1.25rem;
   --regular-font-size: 1.75rem;
   --large-font-size: 4rem;
@@ -183,8 +183,6 @@ section > .section-heading {
 .skills {
   /* background-color: aqua; */
   background-color: var(--secondary-bg-color);
-  min-height: 100vh;
-  min-height: 100dvh;
 }
 
 .skills > .skills-container {
@@ -338,6 +336,44 @@ section > .section-heading {
   padding: 3em;
 
 }
+
+.contacts > .contact-infos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contacts > .contact-infos-container > .contact-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 30vmax;
+  width: 30dvmax;
+  aspect-ratio: 16 / 9;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+}
+.contacts > .contact-infos-container > div > i {
+  color: var(--highlight-text-color);
+  font-size: 200%;
+}
+
+
+.contacts > .contact-infos-container > div > p {
+  font-size: 100%;
+}
+
+
+
+
+
+
+
+
+
 
 
 
