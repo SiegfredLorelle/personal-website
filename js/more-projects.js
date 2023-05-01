@@ -1,6 +1,6 @@
 const moreButton = document.querySelector(".more-btn");
 const moreIcon = document.querySelector(".more-icon");
-const moreButtonText = document.querySelector(".more-icon + p");
+const moreButtonText = document.querySelector(".more-icon + span");
 const moreProjects = document.querySelector(".more-projects");
 
 console.log(moreButton, moreIcon);

@@ -34,6 +34,8 @@ button {
   padding: 0.5rem;
   cursor: pointer;
   font-family: "poppins", "Arial", sans-serif;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
 }
 
 
@@ -50,9 +52,9 @@ header > .logo,
 header .header-btn,
 .top-nav-list.mobile > .header-btn {
   padding: 1rem 2.5rem;
-  background-color: var(--primary-bg-color);
+  /* background-color: var(--primary-bg-color); */
   font-size: var(--small-font-size);
-  color: var(--text-color);
+  /* color: var(--text-color); */
   border-radius: 25px;
 }
 
@@ -98,6 +100,7 @@ header .header-btn:hover,
 .top-nav-list.mobile {
   display: none;
   flex-direction: column;
+  text-align: center;
 }
 
 
@@ -286,7 +289,7 @@ header .header-btn:hover,
 
 .projects > .projects-container > .project-container > img,
 .projects > .projects-container > .project-container > p,
-.projects > .projects-container > .project-container > .project-links > button {
+.projects > .projects-container > .project-container > .project-links > a {
   border-radius: 25px;
 }
 
@@ -317,11 +320,14 @@ header .header-btn:hover,
   height: 100%;
 }
 
-.projects > .projects-container > .project-container > .project-links > button {
+.projects > .projects-container > .project-container > .project-links > a {
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
   width: 90%;
-  background-color: aqua;
-  height: 40%;
   font-size: var(--small-font-size);
+  text-align: center;
+  padding: 7.5%;
+  text-decoration: none;
 }
 
 
