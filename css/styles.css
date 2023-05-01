@@ -336,6 +336,22 @@ section > .section-heading {
   padding: 3em;
 
 }
+.contacts > hgroup {
+  padding: 2em;
+}
+
+.contacts > hgroup > * {
+  text-align: center;
+}
+
+.contacts > hgroup > .contact-title {
+  font-size: calc(1.25em + 1vw);
+  color: var(--highlight-text-color);
+}
+
+.contacts > hgroup > p {
+  font-size: calc(1em + 1vw);
+}
 
 .contacts > .contact-infos-container {
   display: flex;
@@ -375,7 +391,6 @@ section > .section-heading {
 }
 
 .contacts > .contact-infos-container > button > span {
-  /* font-size: 1rem; */
   display: block;
   font-size: calc(0.5em + 1vw);
 
