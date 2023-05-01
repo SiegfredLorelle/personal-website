@@ -2,6 +2,7 @@
   --primary-bg-color: #0c0b10;
   --hover-bg-color: #181820;
   --secondary-bg-color: #191919;
+  --disabled-btn-color:  rgb(107, 107, 107);
 
   --text-color: #EDEDED;
   --highlight-text-color: rgb(255, 106, 106);
@@ -217,7 +218,7 @@ header .header-btn:hover,
 /* Start of Skills Section */
 
 .skills {
-  background-color: aqua;
+  /* background-color: aqua; */
   background-color: var(--secondary-bg-color);
   min-height: 100vh;
   min-height: 100dvh;
@@ -337,6 +338,13 @@ header .header-btn:hover,
   text-align: center;
   padding: 7.5%;
   text-decoration: none;
+}
+
+.projects > .projects-container > .project-container > 
+.project-links > .inactive-link {
+  opacity: 0.5;
+  background-color: --disabled-btn-color;
+  cursor: not-allowed
 }
 
 
