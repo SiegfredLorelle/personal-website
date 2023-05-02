@@ -3,10 +3,8 @@ const moreIcon = document.querySelector(".more-icon");
 const moreButtonText = document.querySelector(".more-icon + span");
 const moreProjects = document.querySelector(".more-projects");
 
-console.log(moreButton, moreIcon);
 
 moreButton.addEventListener("click", () => {
-  console.log(moreIcon.classList.contains("fa-angle-down"));
   if (moreIcon.classList.contains("fa-angle-down")) {
     showMore();
   }
