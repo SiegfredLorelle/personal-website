@@ -1,11 +1,11 @@
 const header = document.querySelector("header");
+let Nav = document.querySelector(".top-nav-list");
 
 let prevScrollPosY = 0;
 let currentScrollPosY;
 document.addEventListener("scroll", () => {
   currentScrollPosY = window.pageYOffset;
-  console.log(prevScrollPosY, currentScrollPosY);
-  if (prevScrollPosY < currentScrollPosY) {
+  if (prevScrollPosY < currentScrollPosY && !Nav.classList.contains("mobile")) {
     header.classList.add("hide");
   } 
   else {

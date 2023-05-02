@@ -88,7 +88,7 @@ body > header {
   z-index: 2;
   width: 100%;
   background-color: var(--primary-bg-color);
-  transition: 0.25s ease-in-out;
+  transition: top 0.25s ease-in-out;
 }
 
 header.hide {
@@ -123,6 +123,7 @@ header > .header-container > .logo {
   display: flex;
   align-self: center;
   flex-direction: row;
+  background-color: var(--primary-bg-color);
 }
 
 header > .header-container > .header-btn.top-nav-hamburger-btn,
