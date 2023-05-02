@@ -62,8 +62,7 @@ section {
   min-height: 100vh;
   min-height: 100dvh;
   /* z-index: 2; */
-  margin: 3rem;
-  padding: 3rem;
+  padding: 3rem 1rem;
 }
 
 section > .section-heading {
