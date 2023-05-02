@@ -1,16 +1,25 @@
 :root {
-  --primary-bg-color: #0c0b10;
-  --hover-bg-color: #181820;
-  --secondary-bg-color: #181818;
-
-  --text-color: #EDEDED;
-  --highlight-text-color: rgb(255, 106, 106);
-
   --smaller-font-size: 1rem;
   --small-font-size: 1.25rem;
   --regular-font-size: 1.75rem;
   --large-font-size: 4rem;
   --larger-font-size: 6rem;
+}
+
+:root,
+:root.dark {
+  --primary-bg-color: #0c0b10;
+  --hover-bg-color: #181818;
+
+  --text-color: #EDEDED;
+  --highlight-text-color: rgb(255, 106, 106);
+}
+:root.light {
+  --primary-bg-color: #EDEDED;
+  --hover-bg-color: #d3d3d3;
+
+  --text-color: #0c0b10;
+  --highlight-text-color: #D2001A;
 }
 
 *, *::before, *::after {
@@ -135,7 +144,6 @@ header .header-btn:hover,
 }
 
 
-
 /* End of Header and Top Nav */
 
 /* ========================================================================== */
@@ -181,7 +189,7 @@ header .header-btn:hover,
 .home > .image-sieg-container > .image-sieg {
   
   /* filter: grayscale(1.0); */
-  opacity: 0.6;
+  /* opacity: 0.6; */
   height: auto;
   width: 90%;
   margin: auto;
@@ -301,7 +309,7 @@ header .header-btn:hover,
 }
 
 .projects > .projects-container > .project-container > .project-links > a {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--hover-bg-color);
   color: var(--text-color);
   width: 90%;
   font-size: var(--small-font-size);
@@ -318,7 +326,7 @@ header .header-btn:hover,
 
 
 .projects > .more-btn {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--hover-bg-color);
   color: var(--text-color);
   margin: 2rem auto;
   display: flex;
@@ -341,7 +349,7 @@ header .header-btn:hover,
 /* Start of Contacts Section */
 
 .contacts {
-  /* background-color: var(--secondary-bg-color); */
+  /* background-color: var(--hover-bg-color); */
   /* min-height: 100vh; */
   min-height: 0;
   padding: 3em;
@@ -391,7 +399,7 @@ header .header-btn:hover,
 
 
 .contacts > .contact-infos-container > button:hover {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--hover-bg-color);
 
 }
 
