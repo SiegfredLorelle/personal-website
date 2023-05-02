@@ -1,9 +1,9 @@
 :root {
-  --smaller-font-size: 1rem;
-  --small-font-size: 1.25rem;
-  --regular-font-size: 1.75rem;
-  --large-font-size: 4rem;
-  --larger-font-size: 6rem;
+  --smaller-font-size: calc(0.25rem + 1vw);
+  --small-font-size: calc(0.75rem + 1vw);
+  --regular-font-size: calc(1rem + 1vw);
+  --large-font-size: calc(2rem + 1vw);
+  --larger-font-size: calc(4rem + 1vw);
 }
 
 :root,
@@ -54,6 +54,7 @@ a {
 }
 
 header {
+  margin-top: 0.5rem;
   padding: 1rem;
   display: flex;
   flex-direction: row;
@@ -389,27 +390,28 @@ header .header-btn:hover,
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  cursor: pointer;
 }
 
-.contacts > .contact-infos-container > button {
+.contacts > .contact-infos-container > a {
   border-radius: 25px;
   padding: 1rem;
   width: 100%;
 }
 
 
-.contacts > .contact-infos-container > button:hover {
+.contacts > .contact-infos-container > a:hover {
   background-color: var(--hover-bg-color);
 
 }
 
-.contacts > .contact-infos-container > button > i {
+.contacts > .contact-infos-container > a > i {
   color: var(--highlight-text-color);
   font-size: calc(1em + 1vw);
 }
 
-.contacts > .contact-infos-container > button > span {
-  font-size: calc(0.5em + 1vw);
+.contacts > .contact-infos-container > a > span {
+  font-size: var(--smaller-font-size);
 
 }
 
@@ -438,7 +440,8 @@ footer > .copyright {
   text-align: center;
   display: block;
   padding-bottom: 3em;
-  font-size: calc(0.1em + 1vw);
+  font-size: calc(0.1rem + 1vw);
+  font-size: var(--smaller-font-size);
 }
 
 
@@ -449,9 +452,9 @@ footer > .copyright {
 /* Mobile and Tablets */
 @media screen and (max-width: 767px) {
   :root {
-    --regular-font-size: 1.5rem;
+    /* --regular-font-size: 1.5rem;
     --large-font-size: 2.5rem;
-    --larger-font-size: 4.5rem;
+    --larger-font-size: 4.5rem; */
   }
 
   header {
@@ -494,9 +497,9 @@ footer > .copyright {
 /* Small Monitors */
 @media screen and (min-width: 768px) and (max-width:991px) {
   :root {
-    --regular-font-size: 1.5rem;
+    /* --regular-font-size: 1.5rem;
     --large-font-size: 3rem;
-    --larger-font-size: 5rem;
+    --larger-font-size: 5rem; */
   }
   
   header .header-btn {
@@ -521,8 +524,8 @@ footer > .copyright {
 /* Large Monitors */
 @media screen and (min-width: 992px) and (max-width:1264px) {
   :root {
-    --regular-font-size: 1.25rem;
+    /* --regular-font-size: 1.25rem;
     --large-font-size: 2.5rem;
-    --larger-font-size: 4.5rem;
+    --larger-font-size: 4.5rem; */
   }
 }
