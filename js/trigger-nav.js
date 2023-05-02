@@ -39,10 +39,13 @@
 
 
 const topNav = document.querySelector(".top-nav-list");
+const topNavItems = document.querySelectorAll(".top-nav-list > a");
+
 const beforeTopNavDesktop = document.querySelector(".logo");
 const beforeTopNavMobile = document.querySelector("header");
+
 const hamburgerBtn = document.querySelector(".top-nav-hamburger-btn");
-const bodyExceptNav = document.querySelector("body");
+const main = document.querySelector("main");
 
 
 // console.log(topNav, beforeTopNavDesktop, beforeTopNavMobile);
@@ -52,17 +55,16 @@ hamburgerBtn.addEventListener("click", toggleNav);
 function showNav() {
   beforeTopNavMobile.after(topNav);
   topNav.classList.add("mobile");
-
-  console.log(bodyExceptNav);
-  // bodyExceptNav.style.opacity = "0.3";
-  // topNav.style.opacity = "1";
+  main.classList.add("active-nav");
+  main.addEventListener("click", toggleNav);
 }
 
 function hideNav() {
   beforeTopNavDesktop.after(topNav);
   topNav.classList.remove("mobile");
-  // bodyExceptNav.style.opacity = "1";
-  // topNav.style.opacity = "1";
+  main.classList.remove("active-nav");
+  main.removeEventListener("click", toggleNav);
+
 }
 
 function toggleNav() {
@@ -81,9 +83,6 @@ window.addEventListener("resize", () => {
   }
 });
 
-
-// window.addEventListener("resize", () => {
-//   if (window.matchMedia("(min-width: 768px)").matches) {
-//     hideNav();
-//   }
-// });
+topNavItems.forEach(element => {
+  element.addEventListener("click", hideNav);
+});

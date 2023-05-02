@@ -52,6 +52,13 @@ header {
   height: 10dvh;
 }
 
+main.active-nav {
+  opacity: 0.3;
+  filter: blur(2px);
+}
+
+
+
 header > .logo,
 header .header-btn,
 .top-nav-list.mobile > .header-btn {
@@ -109,8 +116,6 @@ header .header-btn:hover,
   right: 0;
   z-index: 1;
 }
-
-
 
 section {
   position: relative;
@@ -404,22 +409,22 @@ section > .section-heading {
 }
 
 
-footer > .socials {
+.contacts > .socials {
   display: flex;
   justify-content: center;
   align-items: center;
   }
 
-footer > .socials > a {
+.contacts > .socials > a {
   justify-content: center;
   border-radius: 50%;
-  margin: 1.5rem;
+  margin: 3em 1em 0;
   font-size: calc(0.75em + 1vw);
   text-decoration: none;
   color: var(--text-color);
 }
 
-footer > .socials > a > i:hover {
+.contacts > .socials > a > i:hover {
   color: var(--highlight-text-color);
 }
 
