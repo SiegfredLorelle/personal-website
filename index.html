@@ -8,8 +8,6 @@
 
     <!-- Font from Adobe Fonts: https://fonts.adobe.com/fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/ara2fof.css">
-    <!-- Icons from Google Fonts: https://fonts.google.com -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,1,0">
     <!-- Icons from Font Awesome: https://fontawesome.com -->
     <script src="https://kit.fontawesome.com/2fa58dfbff.js" crossorigin="anonymous"></script>
     <!-- Icons from Devicon: https://devicon.dev -->
@@ -21,28 +19,30 @@
 
   <body>
     <header>
-      <button class="top-nav-hamburger-btn header-btn">
-        <span class="material-symbols-rounded">
-          menu
-        </span>
-      </button>
-      <a class="logo" href="#">Siegfred Mina</a>
-      <nav class="top-nav-list">
-        <a class="header-btn" href="#skills">Skills</a>
-        <a class="header-btn" href="#projects">Projects</a>
-        <a class="header-btn" href="#contacts">Contacts</a>
-      </nav>
-      <!-- <a>Color Scheme</a> -->
-      <button class="header-btn toggle-theme-btn">
-        <i class="fa-solid fa-sun"></i>
-      </button>
+      <div class="header-container">
+        <button class="top-nav-hamburger-btn header-btn">
+          <span class="material-symbols-rounded">
+            menu
+          </span>
+        </button>
+        <a class="logo" href="#">Siegfred Mina</a>
+        <nav class="top-nav-list">
+          <a class="header-btn" href="#skills">Skills</a>
+          <a class="header-btn" href="#projects">Projects</a>
+          <a class="header-btn" href="#contacts">Contacts</a>
+        </nav>
+        <!-- <a>Color Scheme</a> -->
+        <button class="header-btn toggle-theme-btn">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+      </div>
     </header>
 
 
     <main>
 
       <section class="home">
-        <h2 id="home" class="section-heading">HOME</h2>
+        <h2 id="home" class="section-heading">Home</h2>
   
         <div class="introduction-container">
           <hgroup class="introduction">
@@ -228,7 +228,7 @@
 
 
 
-
+    <script src="./js/hide-header.js"></script>
     <script src="./js/toggle-color-theme.js"></script>
     <script src="./js/trigger-nav.js"></script>
     <script src="./js/skill-size.js"></script>

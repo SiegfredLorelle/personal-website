@@ -10,15 +10,13 @@
 :root.dark {
   --primary-bg-color: #0c0b10;
   --hover-bg-color: #181818;
-
   --text-color: #EDEDED;
   --highlight-text-color: rgb(255, 106, 106);
 }
 :root.light {
   --primary-bg-color: #EDEDED;
   --hover-bg-color: #d3d3d3;
-
-  --text-color: #0c0b10;
+  --text-color: #181818;
   --highlight-text-color: #D2001A;
 }
 
@@ -37,6 +35,7 @@ body {
   font-style: normal;
   line-height: 1.15;
   scroll-behavior: smooth;
+  transition: 0.5s ease-in-out;
 }
 
 button {
@@ -53,16 +52,6 @@ a {
   color: var(--text-color);
 }
 
-header {
-  margin-top: 0.5rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 10vh;
-  height: 10dvh;
-}
-
 main.active-nav {
   opacity: 0.3;
   filter: blur(2px);
@@ -72,17 +61,19 @@ section {
   position: relative;
   min-height: 100vh;
   min-height: 100dvh;
-  /* z-index: 2; */
-  padding: 3rem 1rem;
+  /* z-index: 1; */
+  margin: 0 1rem;
+  padding: 4rem 0;
 }
 
 section > .section-heading {
   position: absolute;
-  font-size: calc(3rem + 1vw);
-  top: -15px;
-  left: 10%;
-  /* z-index: 1; */
+  font-size: var(--large-font-size);
+  /* top: 50%; */
+  left: 7.5%;
+  top: 5%;
   opacity: 0.1;
+  /* writing-mode: vertical-lr; */
 }
 
 
@@ -91,6 +82,29 @@ section > .section-heading {
 /* ========================================================================== */
 
 /* Start of Header and Top Nav */
+body > header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: var(--primary-bg-color);
+  transition: 0.25s ease-in-out;
+}
+
+header.hide {
+  top: -50%;
+}
+
+header > .header-container {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 10vh;
+  height: 10dvh;
+
+}
 
 .header-btn {
   padding: 1rem 2.5rem;
@@ -98,10 +112,8 @@ section > .section-heading {
   border-radius: 25px;
 }
 
-header > .logo {
+header > .header-container > .logo {
   padding: 0 1rem;
-  background-color: var(--primary-bg-color);
-  color: var(--text-color);
   font-size: var(--regular-font-size);
   margin-right: 3rem;
   border-radius: 25px;
@@ -113,18 +125,18 @@ header > .logo {
   flex-direction: row;
 }
 
-header > .header-btn.top-nav-hamburger-btn,
-header > .header-btn.toggle-theme-btn {
+header > .header-container > .header-btn.top-nav-hamburger-btn,
+header > .header-container > .header-btn.toggle-theme-btn {
   padding: 1rem;
   display: grid;
   align-items: center;
 }
 
-header > .header-btn.top-nav-hamburger-btn {
+header > .header-container > .header-btn.top-nav-hamburger-btn {
   display: none;
 }
 
-header > .header-btn.toggle-theme-btn {
+header > .header-container > .header-btn.toggle-theme-btn {
   margin-left: auto;
 }
 
@@ -152,6 +164,8 @@ header .header-btn:hover,
 /* Start of Home Section */
 
 .home {
+  margin-top: 10vh;
+  margin-top: 10dvh;
   min-height: 90vh;
   min-height: 90dvh;
   display: grid;
@@ -212,6 +226,7 @@ header .header-btn:hover,
   justify-content: center;
   min-height: 100vh;
   min-height: 100dvh;
+  padding-top: 3rem;
 }
 
 .skills > .skills-container > .skill-icon {
@@ -239,7 +254,8 @@ header .header-btn:hover,
   justify-content: center;
   min-height: 100vh;
   min-height: 100dvh;
-  margin: 3rem;
+  padding-top: 3rem;
+
 }
 
 .projects > .projects-container > .project-container {
@@ -257,7 +273,7 @@ header .header-btn:hover,
 }
 
 .projects > .projects-container.more-projects {
-  padding-top: 0;
+  padding-top: 1rem;
   display: none;
 }
 
@@ -350,11 +366,8 @@ header .header-btn:hover,
 /* Start of Contacts Section */
 
 .contacts {
-  /* background-color: var(--hover-bg-color); */
-  /* min-height: 100vh; */
   min-height: 0;
-  padding: 3em;
-
+  padding-top: 3rem;
 }
 .contacts > hgroup {
   padding: 2em;
@@ -457,23 +470,23 @@ footer > .copyright {
     --larger-font-size: 4.5rem; */
   }
 
-  header {
+  header > .header-container  {
     justify-content: space-between;
   }
 
-  header > .logo {
+  header > .header-container > .logo {
     margin-right: 0;
   }
   
-  header > .top-nav-list {
+  header > .header-container > .top-nav-list {
     display: none;
   }
 
-  header > .header-btn.top-nav-hamburger-btn {
+  header > .header-container > .header-btn.top-nav-hamburger-btn {
       display: grid;
   }
 
-  header > .header-btn.toggle-theme-btn {
+  header > .header-container > .header-btn.toggle-theme-btn {
     margin-left: 0;
   }
   

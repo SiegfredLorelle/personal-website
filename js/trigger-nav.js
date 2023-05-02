@@ -2,7 +2,7 @@ const topNav = document.querySelector(".top-nav-list");
 const topNavItems = document.querySelectorAll(".top-nav-list > a");
 
 const beforeTopNavDesktop = document.querySelector(".logo");
-const beforeTopNavMobile = document.querySelector("header");
+const beforeTopNavMobile = document.querySelector(".header-container");
 
 const hamburgerBtn = document.querySelector(".top-nav-hamburger-btn");
 const main = document.querySelector("main");
