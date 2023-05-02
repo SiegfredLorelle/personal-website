@@ -417,7 +417,12 @@ footer > .socials > a > i:hover {
 }
 
 
-
+footer > .copyright {
+  text-align: center;
+  display: block;
+  padding: 3em;
+  font-size: calc(0.1em + 1vw);
+}
 
 
 
