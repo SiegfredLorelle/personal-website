@@ -57,15 +57,15 @@ main.active-nav {
   filter: blur(2px);
 }
 
+/* ========================================================================== */
+
+/* Start of Header and Top Nav */
 
 
 header > .logo,
-header .header-btn,
-.top-nav-list.mobile > .header-btn {
+.header-btn {
   padding: 1rem 2.5rem;
-  /* background-color: var(--primary-bg-color); */
   font-size: var(--small-font-size);
-  /* color: var(--text-color); */
   border-radius: 25px;
 }
 
@@ -76,8 +76,6 @@ header > .logo {
   font-size: var(--regular-font-size);
   margin-right: 3rem;
   border-radius: 25px;
-
-
 }
 
 .top-nav-list {
@@ -127,6 +125,11 @@ section > .section-heading {
   position: absolute;
 }
 
+/* End of Header and Top Nav */
+
+/* ========================================================================== */
+
+/* Start of Home Section */
 
 .home {
   min-height: 90vh;
@@ -173,18 +176,6 @@ section > .section-heading {
   margin: auto;
   display: block;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* End of Home Section */
 
