@@ -57,12 +57,31 @@ main.active-nav {
   filter: blur(2px);
 }
 
+section {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  /* z-index: 2; */
+  margin: 3rem;
+  padding: 3rem;
+}
+
+section > .section-heading {
+  position: absolute;
+  font-size: calc(3rem + 1vw);
+  top: -15px;
+  left: 10%;
+  /* z-index: 1; */
+  opacity: 0.1;
+}
+
+
+
+
 /* ========================================================================== */
 
 /* Start of Header and Top Nav */
 
-
-header > .logo,
 .header-btn {
   padding: 1rem 2.5rem;
   font-size: var(--small-font-size);
@@ -115,15 +134,7 @@ header .header-btn:hover,
   z-index: 1;
 }
 
-section {
-  position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
-}
 
-section > .section-heading {
-  position: absolute;
-}
 
 /* End of Header and Top Nav */
 
@@ -183,11 +194,6 @@ section > .section-heading {
 
 /* Start of Skills Section */
 
-.skills {
-  /* background-color: aqua; */
-  background-color: var(--secondary-bg-color);
-}
-
 .skills > .skills-container {
   display: flex;
   flex-direction: row;
@@ -224,7 +230,7 @@ section > .section-heading {
   justify-content: center;
   min-height: 100vh;
   min-height: 100dvh;
-  padding: 3em;
+  margin: 3rem;
 }
 
 .projects > .projects-container > .project-container {
@@ -423,7 +429,7 @@ section > .section-heading {
 footer > .copyright {
   text-align: center;
   display: block;
-  padding: 3em;
+  padding-bottom: 3em;
   font-size: calc(0.1em + 1vw);
 }
 
