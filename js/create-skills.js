@@ -88,11 +88,15 @@ let sortedIcons = []
 createSkillIcons();
 
 function createSkillIcons() {
-
-  while (skills.length) {
+  let new_skills = skills.slice();
+  while (new_skills.length) {
     // Get a random index to remove
-    let randomIndex = getRandomIndex(skills.length);
-    let skill = skills.splice(randomIndex, 1)[0];
+    let randomIndex = getRandomIndex(new_skills.length);
+    let skill = new_skills[randomIndex];
+    new_skills = new_skills.slice(0, randomIndex).concat(new_skills.slice(randomIndex+1));
+
+    // console.log(skill, new_skills);
+
     // Create skill icon then adjust its size
     cell = createSkillIcon(skill);
     adjustSkillIconSize(skill, cell);
@@ -135,4 +139,13 @@ window.addEventListener("resize", () => {
   sortedIcons.forEach(icon => {
     adjustSkillIconSize(icon.skill, icon.cell);
   });
+});
+
+
+/* Shuffle the skills */
+const shuffleBtn = document.querySelector(".shuffle-btn");
+shuffleBtn.addEventListener("click", () => {
+  // Remove all skills then create a new one for each
+  skillsContainer.replaceChildren();
+  createSkillIcons();
 });

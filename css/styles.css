@@ -240,10 +240,41 @@ header .header-btn:hover,
   font-size: var(--large-font-size);
   margin: 0.5rem;
   padding: 1rem;
+  animation: delayShowing 0.25s;
 }
 
 .skills > .skills-container > .skill-icon:hover {
   color: var(--highlight-text-color);
+}
+
+@keyframes delayShowing {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Shuffle button is in skills section, more button is in project section */
+.shuffle-btn,
+.more-btn {
+  background-color: var(--hover-bg-color);
+  color: var(--text-color);
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--smaller-font-size);
+  padding: 1.25rem;
+  border-radius: 2rem;
+}
+.shuffle-btn:hover,
+.more-btn:hover {
+  background-color: var(--text-color);
+  color: var(--primary-bg-color);
 }
 
 /* End of Skills Section */
@@ -285,6 +316,7 @@ header .header-btn:hover,
 .projects > .projects-container.more-projects {
   padding-top: 1 rem;
   display: none;
+  animation: delayShowing 0.25s ease-in-out;
 }
 
 
@@ -356,24 +388,6 @@ header .header-btn:hover,
 .project-links > .inactive-link {
   opacity: 0.5;
   cursor: not-allowed
-}
-
-
-.projects > .more-btn {
-  background-color: var(--hover-bg-color);
-  color: var(--text-color);
-  margin: 2rem auto;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: var(--smaller-font-size);
-  padding: 1.25rem;
-  border-radius: 2rem;
-}
-
-.projects > .more-btn:hover {
-  background-color: var(--text-color);
-  color: var(--primary-bg-color);
 }
 
 /* End of Projects Section */
