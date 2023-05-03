@@ -14,13 +14,14 @@ moreButton.addEventListener("click", () => {
 });
 
 function showMore() {
-  moreProjects.style.display = "flex";
+  moreProjects.classList.toggle("hidden");
   changeIcon(moreIcon, "fa-angle-down", "fa-angle-up");
   moreButtonText.innerHTML = "See Less";
 }
 
 function showLess() {
-  moreProjects.style.display = "none";
+  moreProjects.classList.toggle("hidden");
+  // moreProjects.style.visibility = "hidden";
   changeIcon(moreIcon, "fa-angle-up", "fa-angle-down");
   moreButtonText.innerHTML = "See More";
 

@@ -33,7 +33,7 @@ html,
 body {
   background-color: var(--primary-bg-color);
   color: var(--text-color);
-  font-family: "poppins", "Arial", sans-serif;
+  font-family: "Poppins", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.15;
@@ -66,7 +66,6 @@ section {
   position: relative;
   min-height: 100vh;
   min-height: 100dvh;
-  /* z-index: 1; */
   margin: 0 1rem;
   padding: 4rem 0;
 }
@@ -79,8 +78,16 @@ section > .section-heading {
   opacity: 0.1;
 }
 
-
-
+@keyframes delayShowing {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 /* ========================================================================== */
 
@@ -108,7 +115,6 @@ header > .header-container {
   align-items: center;
   height: 10vh;
   height: 10dvh;
-
 }
 
 .header-btn {
@@ -196,7 +202,6 @@ header .header-btn:hover,
   vertical-align: baseline;
 }
 
-
 .home > .introduction-container > .introduction > .name-intro {
   font-size: var(--large-font-size);
 }
@@ -207,11 +212,11 @@ header .header-btn:hover,
   font-weight: 700;
 }
 
+.home > .introduction-container > .introduction > .name > span {
+  color: var(--text-color);
+}
 
 .home > .image-sieg-container > .image-sieg {
-  
-  /* filter: grayscale(1.0); */
-  /* opacity: 0.6; */
   height: auto;
   width: 90%;
   margin: auto;
@@ -247,16 +252,6 @@ header .header-btn:hover,
   color: var(--highlight-text-color);
 }
 
-@keyframes delayShowing {
-  from {
-    opacity: 0;
-    transform: scale(0);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
 /* Shuffle button is in skills section, more button is in project section */
 .shuffle-btn,
@@ -293,7 +288,6 @@ header .header-btn:hover,
   min-height: 100vh;
   min-height: 100dvh;
   padding-top: 3rem;
-
 }
 
 .projects > .projects-container > .project-container {
@@ -303,22 +297,30 @@ header .header-btn:hover,
   opacity: 0.75;
   box-shadow: 0.75rem 0.75rem 3px var(--hover-bg-color);
   position: relative;
-  transition-property: opacity; 
+  transition-property: opacity, top, right;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-function);
 }
 
 .projects > .projects-container > .project-container:hover {
-  box-shadow: 0.75rem 0.75rem var(--highlight-text-color);
+  box-shadow: 1rem 1rem var(--highlight-text-color);
   opacity: 1;
+  top: -5px;
+  right: 5px;
 }
 
 .projects > .projects-container.more-projects {
   padding-top: 1 rem;
   display: none;
+  visibility: hidden;
   animation: delayShowing 0.25s ease-in-out;
 }
 
+.projects > .projects-container.more-projects.hidden {
+  display: flex;
+  visibility: visible;
+
+}
 
 .projects > .projects-container > .project-container > * {
   position: absolute;
@@ -362,8 +364,6 @@ header .header-btn:hover,
   height: 100%;
   visibility: hidden;
   opacity: 0;
-  /* transition: visibility 0.25s ease-in-out;
-  transition: visibility var(--transition); */
   transition-property: visibility, opacity; 
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-function);
@@ -446,7 +446,6 @@ header .header-btn:hover,
 
 .contacts > .contact-infos-container > a:hover {
   background-color: var(--hover-bg-color);
-
 }
 
 .contacts > .contact-infos-container > a > i {
@@ -456,7 +455,6 @@ header .header-btn:hover,
 
 .contacts > .contact-infos-container > a > span {
   font-size: var(--smaller-font-size);
-
 }
 
 
@@ -489,18 +487,15 @@ footer > .copyright {
 }
 
 
+/* End of Contacts Section */
 
+/* ========================================================================== */
 
+/* Start of Media Queries */
 
 
 /* Mobile and Tablets */
 @media screen and (max-width: 767px) {
-  :root {
-    /* --regular-font-size: 1.5rem;
-    --large-font-size: 2.5rem;
-    --larger-font-size: 4.5rem; */
-  }
-
   header > .header-container  {
     justify-content: space-between;
   }
@@ -521,7 +516,6 @@ footer > .copyright {
     margin-left: 0;
   }
   
-
   .home > .introduction-container {
     height: 90vh;
     height: 90dvh;
@@ -540,12 +534,6 @@ footer > .copyright {
 
 /* Small Monitors */
 @media screen and (min-width: 768px) and (max-width:991px) {
-  :root {
-    /* --regular-font-size: 1.5rem;
-    --large-font-size: 3rem;
-    --larger-font-size: 5rem; */
-  }
-  
   header .header-btn {
     padding: 1rem 1.5rem;
   }
@@ -562,14 +550,5 @@ footer > .copyright {
   .home {
     grid-template-columns: none;
     grid-auto-flow: row;
-  }
-}
-
-/* Large Monitors */
-@media screen and (min-width: 992px) and (max-width:1264px) {
-  :root {
-    /* --regular-font-size: 1.25rem;
-    --large-font-size: 2.5rem;
-    --larger-font-size: 4.5rem; */
   }
 }

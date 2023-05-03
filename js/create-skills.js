@@ -77,6 +77,8 @@ const skills = [
     className: "devicon-flask-plain",
     proficiency: 60,
   },
+
+  // Add morse skills here
 ]
 
 const skillsContainer = document.querySelector(".skills-container");
@@ -94,8 +96,6 @@ function createSkillIcons() {
     let randomIndex = getRandomIndex(new_skills.length);
     let skill = new_skills[randomIndex];
     new_skills = new_skills.slice(0, randomIndex).concat(new_skills.slice(randomIndex+1));
-
-    // console.log(skill, new_skills);
 
     // Create skill icon then adjust its size
     cell = createSkillIcon(skill);
