@@ -85,13 +85,13 @@ section > .section-heading {
 /* ========================================================================== */
 
 /* Start of Header and Top Nav */
-body > header {
+header {
   position: fixed;
   top: 0;
   z-index: 2;
   width: 100%;
   background-color: var(--primary-bg-color);
-  transition-property: top;
+  transition-property: top, color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-function);
 }
@@ -172,6 +172,7 @@ header .header-btn:hover,
 .home {
   margin-top: 10vh;
   margin-top: 10dvh;
+  padding-top: 0;
   min-height: 90vh;
   min-height: 90dvh;
   display: grid;
