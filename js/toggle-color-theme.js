@@ -9,7 +9,6 @@ colorThemeButton.addEventListener("click", () => {
 
 function toggleColorTheme() {
   document.documentElement.classList.toggle("light");
-  // document.documentElement.classList.toggle("fa-sun");
 }
 
 function toggleColorThemeIcon() {

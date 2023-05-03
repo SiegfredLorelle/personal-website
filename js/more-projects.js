@@ -21,7 +21,6 @@ function showMore() {
 
 function showLess() {
   moreProjects.classList.toggle("hidden");
-  // moreProjects.style.visibility = "hidden";
   changeIcon(moreIcon, "fa-angle-up", "fa-angle-down");
   moreButtonText.innerHTML = "See More";
 
