@@ -200,8 +200,9 @@ header .header-btn:hover,
   font-size: var(--regular-font-size);
   text-align: justify;
   align-self: center;
-  margin: 0 10%;
+  padding: 0 10%;
   vertical-align: baseline;
+  width: 100%;
 }
 
 .home > .introduction-container > .introduction > .name-intro {
@@ -216,6 +217,15 @@ header .header-btn:hover,
 
 .home > .introduction-container > .introduction > .name > span {
   color: var(--text-color);
+}
+.home > .introduction-container > a {
+  width: 100%;
+}
+
+.home > .introduction-container > a > .resume-btn {
+  margin: 2rem 10%;
+  /* margin-right: auto; */
+  /* width: 100%; */
 }
 
 .home > .image-sieg-container > .image-sieg {
@@ -257,6 +267,7 @@ header .header-btn:hover,
 
 /* Shuffle button is in skills section, more button is in project section */
 .shuffle-btn,
+.resume-btn,
 .more-btn {
   background-color: var(--hover-bg-color);
   color: var(--text-color);
@@ -268,6 +279,7 @@ header .header-btn:hover,
   padding: 1.25rem;
   border-radius: 2rem;
 }
+.resume-btn:hover,
 .shuffle-btn:hover,
 .more-btn:hover {
   background-color: var(--text-color);
@@ -537,8 +549,10 @@ footer > .copyright {
     display: none;
   }
 
+  .home > .introduction-container > a > .resume-btn {
+    margin: 2rem auto;
+  }
 }
-
 
 /* Small Monitors */
 @media screen and (min-width: 768px) and (max-width:991px) {
@@ -562,4 +576,9 @@ footer > .copyright {
   .home > .image-sieg-container > .image-sieg {
     display: none;
   }
+
+  .home > .introduction-container > a > .resume-btn {
+    margin: 2rem auto;
+  }
+
 }
