@@ -4,7 +4,7 @@ const contactInfoButtons = document.querySelectorAll(".contact-info-container");
 contactInfoButtons.forEach(btn => {
   btn.addEventListener("click", () => {
     text = btn.children.item(1).innerHTML;
-    copyToClipboard(text);
+    // copyToClipboard(text);
   });
 });
 
