@@ -12,12 +12,14 @@
 :root,
 :root.dark {
   --primary-bg-color: #0c0b10;
+  --secondary-bg-color: #262626;
   --hover-bg-color: #181818;
   --text-color: #EDEDED;
   --highlight-text-color: rgb(255, 106, 106);
 }
 :root.light {
   --primary-bg-color: #EDEDED;
+  --secondary-bg-color: #BABABA;
   --hover-bg-color: #d3d3d3;
   --text-color: #181818;
   --highlight-text-color: #D2001A;
@@ -441,6 +443,7 @@ header .header-btn:hover,
   border-radius: 25px;
   padding: 1rem;
   width: 100%;
+  background-color: var(--secondary-bg-color);
 }
 
 
@@ -533,7 +536,7 @@ footer > .copyright {
   .home > .image-sieg-container > .image-sieg {
     display: none;
   }
-  
+
 }
 
 
