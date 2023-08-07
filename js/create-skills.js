@@ -77,6 +77,12 @@ const skills = [
     className: "devicon-flask-plain",
     proficiency: 60,
   },
+  {
+    skillName: "React",
+    classClassification: "fa-brands",
+    className: "fa-react",
+    proficiency: 30,
+  },
 
   // Add morse skills here
 ]
