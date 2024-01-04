@@ -92,6 +92,16 @@ section > .section-heading {
 }
 
 /* ========================================================================== */
+/* Start of Tooltips */
+
+.tooltip {
+  /* background-color: pink; */
+  --bs-tooltip-bg: var(--secondary-bg-color);
+  --bs-tooltip-color: var(--text-color);
+}
+
+/* End of Tooltips */
+/* ========================================================================== */
 
 /* Start of Header and Top Nav */
 header {

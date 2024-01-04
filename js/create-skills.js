@@ -199,6 +199,7 @@ function createSkillIcon(skill) {
   cell.classList.add(skill.className);
   cell.setAttribute("data-bs-toggle", "tooltip");
   cell.setAttribute("data-bs-title", skill.skillName);
+  cell.setAttribute("data-bs-custom-class", "tooltip");
   return cell;
 
 }
