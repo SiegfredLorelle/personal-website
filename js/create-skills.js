@@ -1,36 +1,36 @@
 const skills = [
   {
-    skillName: "html",
+    skillName: "HTML",
     classClassification: "fa-brands",
     className: "fa-html5",
     proficiency: 80,
   },
   {
-    skillName: "css",
+    skillName: "CSS",
     classClassification: "fa-brands",
     className: "fa-css3-alt",
     proficiency: 70,
   },
   {
-    skillName: "javascript",
+    skillName: "JavaScript",
     classClassification: "fa-brands",
     className: "fa-square-js",
     proficiency: 70,
   },
   {
-    skillName: "c#",
+    skillName: "C#",
     classClassification: "fa-brands",
     className: "devicon-csharp-plain",
     proficiency: 30,
   },
   {
-    skillName: "c",
+    skillName: "C",
     classClassification: "fa-brands",
     className: "devicon-c-plain",
     proficiency: 40,
   },
   {
-    skillName: "python",
+    skillName: "Python",
     classClassification: "fa-brands",
     className: "fa-python",
     proficiency: 90,
@@ -39,28 +39,28 @@ const skills = [
     skillName: "R",
     classClassification: "fa-brands",
     className: "fa-r-project",
-    proficiency: 30,
+    proficiency: 20,
   },
   {
-    skillName: "unity",
+    skillName: "Unity",
     classClassification: "fa-brands",
     className: "fa-unity",
     proficiency: 60,
   },
   {
-    skillName: "git",
+    skillName: "Git",
     classClassification: "fa-brands",
     className: "fa-git-alt",
     proficiency: 70,
   },
   {
-    skillName: "bootstrap",
+    skillName: "Bootstrap",
     classClassification: "fa-brands",
     className: "fa-bootstrap",
     proficiency: 80,
   },
   {
-    skillName: "unix",
+    skillName: "Unix",
     classClassification: "fa-brands",
     className: "fa-linux",
     proficiency: 70,
@@ -82,6 +82,78 @@ const skills = [
     classClassification: "fa-brands",
     className: "fa-react",
     proficiency: 30,
+  },
+  {
+    skillName: "Docker",
+    classClassification: "fa-brands",
+    className: "fa-docker",
+    proficiency: 40,
+  },
+  {
+    skillName: "NodeJS",
+    classClassification: "fa-brands",
+    className: "fa-node-js",
+    proficiency: 30,
+  },
+  {
+    skillName: "TensorFlow",
+    classClassification: "fa-brands",
+    className: "devicon-tensorflow-original",
+    proficiency: 50,
+  },
+  {
+    skillName: "NumPy",
+    classClassification: "fa-brands",
+    className: "devicon-numpy-original",
+    proficiency: 40,
+  },
+  {
+    skillName: "Pandas",
+    classClassification: "fa-brands",
+    className: "devicon-pandas-original",
+    proficiency: 40,
+  },
+  {
+    skillName: "Kaggle",
+    classClassification: "fa-brands",
+    className: "fa-kaggle",
+    proficiency: 40,
+  },
+  {
+    skillName: "Laravel",
+    classClassification: "fa-brands",
+    className: "fa-laravel",
+    proficiency: 30,
+  },
+  {
+    skillName: "PHP",
+    classClassification: "fa-brands",
+    className: "fa-php",
+    proficiency: 30,
+  },
+  {
+    skillName: "WordPress",
+    classClassification: "fa-brands",
+    className: "fa-wordpress",
+    proficiency: 20,
+  },
+  {
+    skillName: "ThreeJS",
+    classClassification: "fa-brands",
+    className: "devicon-threejs-original",
+    proficiency: 20,
+  },
+  {
+    skillName: "MySQL",
+    classClassification: "fa-brands",
+    className: "devicon-mysql-plain",
+    proficiency: 40,
+  },
+  {
+    skillName: "Jupyter",
+    classClassification: "fa-brands",
+    className: "devicon-jupyter-plain",
+    proficiency: 40,
   },
 
   // Add morse skills here
@@ -111,6 +183,7 @@ function createSkillIcons() {
     // when skill icons needs to be updated
     sortedIcons.push({cell: cell, skill, skill});
   }
+  enableTooltip();
 }
 
 function getRandomIndex(size) {
@@ -124,6 +197,8 @@ function createSkillIcon(skill) {
   cell.classList.add("skill-icon", "fa-brands");
   skillsContainer.appendChild(cell);
   cell.classList.add(skill.className);
+  cell.setAttribute("data-bs-toggle", "tooltip");
+  cell.setAttribute("data-bs-title", skill.skillName);
   return cell;
 
 }
@@ -139,6 +214,10 @@ function adjustSkillIconSize(skill, cell) {
   cell.style.fontSize = `${fontSize}%`;
 }
 
+function enableTooltip() {
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+}
 
 /* Listen to window resize to update the skill icon size */
 window.addEventListener("resize", () => {
